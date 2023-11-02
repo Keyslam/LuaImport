@@ -39,8 +39,10 @@ end
 
 local useImport = function(fn)
     _G["import"] = import
-    fn()
+    local results = { fn() }
     _G["import"] = nil
+
+    return unpack(results)
 end
 
 return {
