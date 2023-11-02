@@ -7,7 +7,7 @@ local function extractPathComponents(path)
     return components
 end
 
-local import = function(path, ...)
+local import = function(path)
     local callerPath = debug.getinfo(2, "S").source:sub(2)
  
     local pathStack = {}
